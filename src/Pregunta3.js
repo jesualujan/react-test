@@ -1,12 +1,12 @@
-// ❌ ERROR: Hook dentro de condicional
+// ❓ Pregunta 3: Limpieza olvidada en efectos
+// 🧩 ¿Qué pasa si este componente se monta y desmonta repetidamente? ¿Cómo solucionarlo?
+
 import { useEffect } from 'react';
 
-export default function Pregunta3({ nombre }) {
-  if (nombre) {
-    useEffect(() => {
-      console.log('¡Hola, ' + nombre + '!');
-    }, []);
-  }
+function ClickLogger() {
+  useEffect(() => {
+    window.addEventListener('click', () => console.log('Click!'));
+  }, []);
 
-  return <h1>Bienvenido</h1>;
+  return <p>Haz clic en cualquier parte</p>;
 }
