@@ -1,14 +1,15 @@
-// ❌ ERROR: setInterval no actualiza correctamente el estado
-import { useEffect, useState } from 'react';
+// ❓ Pregunta 2: useEffect mal usado (dependencias incorrectas)
+// 🧩 ¿Qué sucede con este código? ¿Qué está mal con las dependencias?
+import { useState, useEffect } from 'react';
 
-export default function Pregunta2() {
-  const [time, setTime] = useState(0);
+function Clock() {
+  const [time, setTime] = useState(new Date());
 
   useEffect(() => {
     setInterval(() => {
-      setTime(time + 1); // ← No siempre actualiza correctamente
+      setTime(new Date());
     }, 1000);
-  }, []);
+  }, [time]);
 
-  return <p>Tiempo: {time}</p>;
+  return <p>{time.toLocaleTimeString()}</p>;
 }
