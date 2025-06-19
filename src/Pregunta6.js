@@ -12,7 +12,7 @@ function InputTracker() {
       type="text"
       value={value}
       onChange={(e) => {
-        value = e.target.value; // ❌ ERROR: mutación directa del estado
+        value = e.target.value; 
       }}
     />
   );
