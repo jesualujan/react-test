@@ -1,9 +1,11 @@
-# 🧠 Examen React: Trampas, Hooks y Batallas Mentales
+# 🧠 Examen Avanzado de React: Ciclo de Vida y Hooks
 
 ¡Bienvenido, joven Padawan del DOM! Este examen contiene desafíos reales que todo master del Frontend debe superar.
 
-## 🧩 ¿Qué hay que hacer?
-Lee cada componente en `/src`, identifica errores, arreglalos y justifica tu cambio en comentarios.
+## 📌 Instrucciones
+Lee cuidadosamente cada bloque de código.
+Identifica errores, trampas o mejoras posibles en el uso de estado, efectos y el ciclo de vida de los componentes.
+Corrige y justifica cada cambio como si fueras un PR reviewer de élite.
 
 ## 📜 Instrucciones
 
@@ -14,7 +16,6 @@ Lee cada componente en `/src`, identifica errores, arreglalos y justifica tu cam
 5. Ve resolviendo cada archivo de `/src` uno a uno.
 6. Haz `git commit` por cada respuesta/resolución que completes.
 7. Sube tus cambios a tu repositorio.
-8. Marca el assignment como completado en GitHub Classroom.
 
 ## 🧠 Consejo
 
