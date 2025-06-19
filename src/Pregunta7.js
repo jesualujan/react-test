@@ -1,14 +1,15 @@
-// Refactor: extraer lógica del reloj en un custom hook
-import { useEffect, useState } from 'react';
+// ❓ Pregunta 7: Renderizado infinito por efecto mal configurado
+// 🧩 ¿Qué está causando que la app se trabe o entre en bucle infinito?
+// ¿Cómo podrías evitarlo respetando la lógica?
 
-export default function Pregunta7() {
-  const [hora, setHora] = useState(new Date());
+import { useState, useEffect } from 'react';
+
+function AutoIncrement() {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const intervalo = setInterval(() => {
-      setHora(new Date());
-    }, 1000);
-  }, []);
+    setCount(count + 1); // ❌ ERROR: actualización sin control
+  }, [count]);
 
-  return <h2>{hora.toLocaleTimeString()}</h2>;
+  return <p>Count: {count}</p>;
 }
