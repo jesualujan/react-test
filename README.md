@@ -1,6 +1,6 @@
 # 🧠 Examen React: Trampas, Hooks y Batallas Mentales
 
-¡Bienvenido, joven Padawan del DOM! Este examen contiene desafíos reales que todo frontend sensei debe superar.
+¡Bienvenido, joven Padawan del DOM! Este examen contiene desafíos reales que todo master del Frontend debe superar.
 
 ## 🧩 ¿Qué hay que hacer?
 Lee cada componente en `/src`, identifica errores, arreglalos y justifica tu cambio en comentarios.
@@ -21,4 +21,4 @@ Lee cada componente en `/src`, identifica errores, arreglalos y justifica tu cam
 Algunas trampas son sutiles… si algo funciona pero no está bien hecho, ¡también está mal! 😈
 
 ---
-> "Con gran hook viene gran responsabilidad." – Tío Ben, probablemente
+> "Un gran hook conlleva una gran responsabilidad." – Tío Ben, probablemente
