@@ -1,5 +1,6 @@
 // ❓ Pregunta 2: useEffect mal usado (dependencias incorrectas)
 // 🧩 ¿Qué sucede con este código? ¿Qué está mal con las dependencias?
+
 import { useState, useEffect } from 'react';
 
 function Clock() {
