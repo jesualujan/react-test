@@ -1,21 +1,19 @@
-// Mejora: evitar re-render innecesarios con useCallback
-import { useCallback, useState } from 'react';
+// ❓ Pregunta 6: Estado mutado directamente en onChange
+// 🧩 ¿Qué está mal aquí? ¿Por qué no funciona el input?
+// ¿Cómo arreglarías el código para que funcione correctamente?
 
-export default function Pregunta6({ items }) {
-  const [contador, setContador] = useState(0);
+import { useState } from 'react';
 
-  const handleClick = () => {
-    console.log('Clic en item');
-  };
+function InputTracker() {
+  const [value, setValue] = useState('');
 
   return (
-    <ul>
-      {items.map((item, index) => (
-        <li key={index} onClick={handleClick}>{item}</li>
-      ))}
-      <button onClick={() => setContador(contador + 1)}>
-        Contador: {contador}
-      </button>
-    </ul>
+    <input
+      type="text"
+      value={value}
+      onChange={(e) => {
+        value = e.target.value; // ❌ ERROR: mutación directa del estado
+      }}
+    />
   );
 }
