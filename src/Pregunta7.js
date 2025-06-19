@@ -8,7 +8,7 @@ function AutoIncrement() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCount(count + 1); // ❌ ERROR: actualización sin control
+    setCount(count + 1); 
   }, [count]);
 
   return <p>Count: {count}</p>;
