@@ -1,12 +1,14 @@
-// ❌ ERROR: Mutación directa del estado
+// ❓ Pregunta 1: Estado no reactivo
+// 🧩 ¿Cuál es el error? ¿Qué pasa con count++? ¿Cómo lo corregirías?
 import { useState } from 'react';
 
-export default function Pregunta1() {
-  const [count, setCount] = useState(0);
+function Counter() {
+  let [count, setCount] = useState(0);
 
-  function incrementar() {
-    count = count + 1; // ← Esto está mal, arreglalo
-  }
+  const increment = () => {
+    count++;
+    console.log(count);
+  };
 
-  return <button onClick={incrementar}>Contador: {count}</button>;
+  return <button onClick={increment}>Count: {count}</button>;
 }
