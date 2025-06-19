@@ -1,14 +1,14 @@
-// ❌ ERROR: async directamente en useEffect
-import { useEffect, useState } from 'react';
+// ❓ Pregunta 4: Uso condicional de hooks
+// 🧩 ¿Por qué esto está prohibido en React? ¿Cómo deberías reestructurarlo?
 
-export default function Pregunta4() {
-  const [pokemon, setPokemon] = useState(null);
+import { useEffect } from 'react';
 
-  useEffect(async () => {
-    const res = await fetch('https://pokeapi.co/api/v2/pokemon/1');
-    const data = await res.json();
-    setPokemon(data);
-  }, []);
+function Saludo({ nombre }) {
+  if (nombre) {
+    useEffect(() => {
+      console.log('Hola ' + nombre);
+    }, []);
+  }
 
-  return <div>{pokemon?.name}</div>;
+  return <h1>Bienvenido</h1>;
 }
